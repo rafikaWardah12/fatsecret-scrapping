@@ -9,7 +9,11 @@ const fs = require('fs');
     await page.goto(mainUrl, { waitUntil: "networkidle2" });
 
     const urlResult = await page.evaluate(() => {
-      const urls = document.querySelectorAll(".factPanel")[1].nextElementSibling.nextElementSibling.querySelectorAll("a");
+      const urls = document.querySelectorAll(".factPanel")[1]?.nextElementSibling?.nextElementSibling?.querySelectorAll("a");
+      if (!urls) {
+        return null;
+      };
+
       const convertUrl = [];
       urls.forEach((el, index) => {
         if (index % 2 == 0) {
@@ -20,6 +24,11 @@ const fs = require('fs');
     });
 
     const results = [];
+    if (!urlResult) {
+      console.log(mainUrl)
+      return results;
+    };
+
     for (const url of urlResult) {
 
       await page.goto(`https://www.fatsecret.co.id` + url, { waitUntil: "networkidle2" });
@@ -63,7 +72,7 @@ const fs = require('fs');
     "https://www.fatsecret.co.id/kalori-gizi/umum/rujak",
     "https://www.fatsecret.co.id/kalori-gizi/umum/ayam-goreng",
     "https://www.fatsecret.co.id/kalori-gizi/umum/ayam-geprek",
-    "https://www.fatsecret.co.id/kalori-gizi/rumah-makan-sederhana/ayam-bakar",
+    // "https://www.fatsecret.co.id/kalori-gizi/rumah-makan-sederhana/ayam-bakar",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-dadar",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-ceplok",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-rebus",
@@ -85,7 +94,7 @@ const fs = require('fs');
     "https://www.fatsecret.co.id/kalori-gizi/umum/rawon",
     "https://www.fatsecret.co.id/kalori-gizi/umum/sup-sayur-vegetarian-(disiapkan-dengan-air)",
     "https://www.fatsecret.co.id/kalori-gizi/umum/kerupuk-putih",
-    "https://www.fatsecret.co.id/kalori-gizi/uleg/sambal-pedas",
+    // "https://www.fatsecret.co.id/kalori-gizi/uleg/sambal-pedas",
   ];
 
   for (const url of urls) {
