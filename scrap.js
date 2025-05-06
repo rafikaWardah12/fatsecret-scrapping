@@ -60,19 +60,20 @@ const fs = require('fs');
   }
 
   const urls = [
-    "https://www.fatsecret.co.id/kalori-gizi/umum/urap",
-    "https://www.fatsecret.co.id/kalori-gizi/umum/ayam-goreng",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/nasi-kuning",
     "https://www.fatsecret.co.id/kalori-gizi/umum/nasi-goreng",
     "https://www.fatsecret.co.id/kalori-gizi/umum/nasi-pecel",
     "https://www.fatsecret.co.id/kalori-gizi/umum/nasi-putih",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/nasi-tiwul",
     "https://www.fatsecret.co.id/kalori-gizi/umum/mie-ayam",
     "https://www.fatsecret.co.id/kalori-gizi/umum/bakso-daging-sapi",
     "https://www.fatsecret.co.id/kalori-gizi/umum/bubur-ayam",
     "https://www.fatsecret.co.id/kalori-gizi/umum/gado-gado",
     "https://www.fatsecret.co.id/kalori-gizi/umum/rujak",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/lontong-balap",
     "https://www.fatsecret.co.id/kalori-gizi/umum/ayam-goreng",
     "https://www.fatsecret.co.id/kalori-gizi/umum/ayam-geprek",
-    // "https://www.fatsecret.co.id/kalori-gizi/rumah-makan-sederhana/ayam-bakar",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/daging-ayam-(panggang-bakar-dimasak)",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-dadar",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-ceplok",
     "https://www.fatsecret.co.id/kalori-gizi/umum/telur-rebus",
@@ -93,8 +94,13 @@ const fs = require('fs');
     "https://www.fatsecret.co.id/kalori-gizi/umum/cap-cay-kuah",
     "https://www.fatsecret.co.id/kalori-gizi/umum/rawon",
     "https://www.fatsecret.co.id/kalori-gizi/umum/sup-sayur-vegetarian-(disiapkan-dengan-air)",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/sayur-asem",
     "https://www.fatsecret.co.id/kalori-gizi/umum/kerupuk-putih",
-    // "https://www.fatsecret.co.id/kalori-gizi/uleg/sambal-pedas",
+    "https://www.fatsecret.co.id/kalori-gizi/uleg/sambal-pedas",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/petis",
+    "https://www.fatsecret.co.id/kalori-gizi/anget-sari/wedang-jahe/1-sachet",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/ikan-mujair-goreng",
+    "https://www.fatsecret.co.id/kalori-gizi/umum/kupat-tahu",
   ];
 
   for (const url of urls) {
